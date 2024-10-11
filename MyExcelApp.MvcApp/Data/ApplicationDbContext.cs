@@ -6,7 +6,5 @@ namespace MyExcelApp.MvcApp.Data
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
-
-        public DbSet<ExcelFileInfo> ExcelFiles { get; set; }
     }
 }
