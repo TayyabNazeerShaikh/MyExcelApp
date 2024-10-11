@@ -1,0 +1,24 @@
+<!-- Views/Excel/Upload.cshtml -->
+@{
+    ViewData["Title"] = "Upload Excel File";
+    Layout = "_Layout";
+}
+
+<h2>Upload Excel File</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">@TempData["Message"]</div>
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="fileName">File Name</label>
+        <input type="text" name="fileName" class="form-control" id="fileName" required>
+    </div>
+    <div class="form-group">
+        <label for="file">Select Excel File</label>
+        <input type="file" name="file" class="form-control-file" id="file" accept=".xlsx" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
